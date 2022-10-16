@@ -1,0 +1,30 @@
+{
+    "token": "token",
+    "userName": "ddmitov",
+    "firstName": "Dimitar",
+    "lastName": "Mitov",
+    "expires": 1665350030573,
+    "email": "ddmitov@gmail.com",
+    "userId": "user-id",
+    "admin": true,
+    "clusterId": "cluster-id",
+    "clusterCreatedAt": 1665241380982,
+    "version": "22.1.1-202208230402290397-a7010f28",
+    "permissions": {
+        "canUploadProfiles": true,
+        "canDownloadProfiles": true,
+        "canEmailForSupport": true,
+        "canChatForSupport": false,
+        "canViewAllJobs": true,
+        "canCreateUser": true,
+        "canCreateRole": true,
+        "canCreateSource": true,
+        "canUploadFile": true,
+        "canManageNodeActivity": true,
+        "canManageEngines": true,
+        "canManageQueues": true,
+        "canManageEngineRouting": true,
+        "canManageSupportSettings": true
+    },
+    "userCreatedAt": 1665241462025
+}

@@ -1,0 +1,1 @@
+DROP TABLE $scratch."trips_totals_by_year"

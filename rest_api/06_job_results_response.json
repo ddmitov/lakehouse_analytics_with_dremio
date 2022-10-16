@@ -1,0 +1,130 @@
+{
+    "rowCount": 3,
+    "schema": [
+        {
+            "name": "IncidntNum",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Category",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Descript",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "DayOfWeek",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Date",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Time",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "PdDistrict",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Resolution",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Address",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "X",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Y",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "Location",
+            "type": {
+                "name": "VARCHAR"
+            }
+        },
+        {
+            "name": "PdId",
+            "type": {
+                "name": "BIGINT"
+            }
+        }
+    ],
+    "rows": [
+        {
+            "IncidntNum": "120058272",
+            "Category": "WEAPON LAWS",
+            "Descript": "POSS OF PROHIBITED WEAPON",
+            "DayOfWeek": "Friday",
+            "Date": "2016-01-29",
+            "Time": "11:00",
+            "PdDistrict": "SOUTHERN",
+            "Resolution": "ARREST, BOOKED",
+            "Address": "800 Block of BRYANT ST",
+            "X": "-122.403404791479",
+            "Y": "37.775420706711",
+            "Location": "(37.775420706711, -122.403404791479)",
+            "PdId": 12005827212120
+        },
+        {
+            "IncidntNum": "120058272",
+            "Category": "WEAPON LAWS",
+            "Descript": "FIREARM, LOADED, IN VEHICLE, POSSESSION OR USE",
+            "DayOfWeek": "Friday",
+            "Date": "2016-01-29",
+            "Time": "11:00",
+            "PdDistrict": "SOUTHERN",
+            "Resolution": "ARREST, BOOKED",
+            "Address": "800 Block of BRYANT ST",
+            "X": "-122.403404791479",
+            "Y": "37.775420706711",
+            "Location": "(37.775420706711, -122.403404791479)",
+            "PdId": 12005827212168
+        },
+        {
+            "IncidntNum": "141059263",
+            "Category": "WARRANTS",
+            "Descript": "WARRANT ARREST",
+            "DayOfWeek": "Monday",
+            "Date": "2016-04-25",
+            "Time": "14:59",
+            "PdDistrict": "BAYVIEW",
+            "Resolution": "ARREST, BOOKED",
+            "Address": "KEITH ST / SHAFTER AV",
+            "X": "-122.388856204292",
+            "Y": "37.7299809672996",
+            "Location": "(37.7299809672996, -122.388856204292)",
+            "PdId": 14105926363010
+        }
+    ]
+}

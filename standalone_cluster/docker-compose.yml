@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  coordinator:
+    image: dremio/dremio-oss
+    container_name: dremio-coordinator
+    volumes:
+      # - ${PWD}/dremio/data:/opt/dremio/data:rw
+      # - ${PWD}/dremio/lib:/var/lib/dremio:rw
+      # - ${PWD}/dremio/local:/localFiles:rw
+      - ${PWD}/dremio-coordinator.conf:/opt/dremio/conf/dremio.conf:ro
+    ports:
+      - "9047:9047"   # Web UI (HTTP)
+      - "31010:31010" # ODBC/JDBC clients
+      - "32010:32010" # Apache Arrow Flight clients
+
+  executor_1:
+    image: dremio/dremio-oss
+    container_name: dremio-executor-1
+    depends_on:
+      - coordinator
+    volumes:
+      - ${PWD}/dremio-executor.conf:/opt/dremio/conf/dremio.conf:ro
+
+#   executor_2:
+#     image: dremio/dremio-oss
+#     container_name: dremio-executor-2
+#     depends_on:
+#       - coordinator
+#     volumes:
+#       - ${PWD}/dremio-executor.conf:/opt/dremio/conf/dremio.conf:ro
+
