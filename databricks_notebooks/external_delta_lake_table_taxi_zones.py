@@ -37,10 +37,24 @@ DIRECTORY = 'delta-lake-taxi-zones'
 
 spark_dataframe = spark.createDataFrame(pandas_dataframe)
 
-spark_dataframe.write.mode('overwrite').format('delta').save('s3a://{}:{}@{}/{}'.format(access_key, secret_key, BUCKET_NAME, DIRECTORY))
+spark_dataframe.write.mode('overwrite').format('delta').save(
+  's3a://{}:{}@{}/{}'.format(
+      access_key,
+      secret_key,
+      BUCKET_NAME,
+      DIRECTORY
+  )
+)
 
 # COMMAND ----------
 
-control_spark_dataframe = spark.read.format('delta').load('s3a://{}:{}@{}/{}'.format(access_key, secret_key, BUCKET_NAME, DIRECTORY))
+control_spark_dataframe = spark.read.format('delta').load(
+  's3a://{}:{}@{}/{}'.format(
+      access_key,
+      secret_key,
+      BUCKET_NAME,
+      DIRECTORY
+  )
+)
 
 display(control_spark_dataframe.sort('LocationID'))

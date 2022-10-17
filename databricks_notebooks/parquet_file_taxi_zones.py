@@ -44,15 +44,26 @@ files = dbutils.fs.ls(temporary_parquet_directory)
 
 for file in files:
     if '.snappy.parquet' in file.name:
-        dbutils.fs.cp(file.path, 's3a://{}:{}@{}/{}/2022/01.snappy.parquet'.format(access_key, secret_key, BUCKET_NAME, PARQUET_DIRECTORY))
+        dbutils.fs.cp(
+          file.path,
+          's3a://{}:{}@{}/{}/2022/01.snappy.parquet'.format(
+              access_key,
+              secret_key,
+              BUCKET_NAME,
+              PARQUET_DIRECTORY
+          )
+        )
 
 dbutils.fs.rm(temporary_parquet_directory, recurse=True)
 
 # COMMAND ----------
 
 control_parquet_dataframe = spark.read.format('parquet').load(
-    's3a://{}:{}@{}/{}/2022/01.snappy.parquet'.format(
-        access_key, secret_key, BUCKET_NAME, PARQUET_DIRECTORY
+    's3a://{}:{}@{}/{}/taxi-zones.snappy.parquet'.format(
+        access_key,
+        secret_key,
+        BUCKET_NAME,
+        PARQUET_DIRECTORY
     )
 )
 
